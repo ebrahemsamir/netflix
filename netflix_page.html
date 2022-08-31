@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/netflix_page.css">
+    <script src="https://kit.fontawesome.com/d197ea1bb6.js" crossorigin="anonymous"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Water+Brush&display=swap"
+        rel="stylesheet">
+    <title>Netflix Home Page</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="./images/Netflix-logo.svg.png" alt="">
+            </div>
+            <div class="select">Browse <i class="fa-solid fa-caret-down"></i></div>
+            <ul class="sections">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">TV Shows</a></li>
+                <li><a href="">movies</a></li>
+                <li><a href="">New & Popular</a></li>
+                <li><a href="">My List</a></li>
+                <li><a href="">Browse by languages</a></li>
+            </ul>
+            <ul class="links">
+                <li class="search"><i class="fa-solid fa-magnifying-glass"></i> <input type="text"
+                        placeholder="Titles,peoples,geners">
+                </li>
+                <li class="bell"><i class="fa-solid fa-bell"></i>
+                    <ul class="new_films">
+                        <li><a href=""><img src="./images/notification-1.jpg" alt="">
+                                <p> New Arrival <br> Day Shift </p>
+                            </a></li>
+                        <li><a href=""><img src="./images/notification-2.jpg" alt="">
+                                <p> Now Available Season 3 </p>
+                            </a></li>
+                        <li><a href=""><img src="./images/notification-3.jpg" alt="">
+                                <p> New Arrival <br> The Gray Man </p>
+                            </a></li>
+                        <li><a href=""><img src="./images/notification-4.jpg" alt="">
+                                <p> New Arrival <br> A Stand Worthy of Men </p>
+                            </a></li>
+                        <li><a href=""><img src="./images/notification-5.jpg" alt="">
+                                <p> Continue Watching <br>Chernobyl 1986 </p>
+                            </a></li>
+                        <li><a href=""><img src="./images/notification-6.jpg" alt="">
+                                <p> New Arrival <br> The Crime </p>
+                            </a></li>
+                    </ul>
+                </li>
+                <li class="accounts"><img src="./images/vector-1.jpg" alt="" class="vector"> <i
+                        class="fa-solid fa-caret-down"></i>
+                    <ul>
+                        <li><img src="./images/vector-2.jpg" alt="">
+                            <p>John </p><i class="fa-solid fa-lock"></i>
+                        </li>
+                        <li><img src="./images/vector-3.jpg" alt="">
+                            <p> Doe</p>
+                        </li>
+                        <li><img src="./images/vector-4.jpg" alt="">
+                            <p>
+                            <p>Heka</p>
+                        </li>
+                        <li><i class="fa-solid fa-pen"></i>
+                            <p> Manage Profiles</p>
+                        </li>
+                        <li><i class="fa-solid fa-user"></i>
+                            <p> Account</p>
+                        </li>
+                        <li><i class="fa-solid fa-circle-question"></i>
+                            <p> Help center</p>
+                        </li>
+                        <li><i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p> Sign Out</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="landing">
+        <video loop muted>
+            <source src="./videos/background-video.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="text">
+                <div class="image">
+                    <img src="./images/logo-background.jpg" alt="">
+                </div>
+                <p>Ambitious gang leader Thomas Shelby recognizes an opportunity to move up in the world thanks to a
+                    missing crate of guns.</p>
+                <button class="play"><i class="fa-solid fa-play"></i> Play</button>
+                <button class="info"><i class="fa-solid fa-info"></i> More Info</button>
+                <button class="restart active re"><i class="fa-solid fa-rotate-right"></i></button>
+                <button class="restart vol"><i class="fa-solid fa-volume-high"></i></button>
+                <button class="restart muted"><i class="fa-solid fa-volume-xmark"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="">
+
+    </section>
+    <script src="./javascript/netflix_page.js"></script>
+</body>
+
+</html>

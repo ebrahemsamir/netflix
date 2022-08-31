@@ -1,0 +1,543 @@
+:root {
+    --main-color: #e50914;
+    --border: 10px solid #222;
+    --padding: 60px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+}
+
+/* 
+Medium  */
+@media (min-width: 992px) {
+    .container {
+        width: 942px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+nav {
+    background-color: transparent;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    margin-right: 50px;
+}
+
+nav .logo img {
+    width: 100px;
+}
+
+nav .sections {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+nav .sections li a {
+    color: #e5e5e5;
+    transition: 0.3s;
+}
+
+nav .sections li:hover>a {
+    color: #e5e5e5ba;
+}
+
+nav .sections li .active {
+    color: white;
+    font-weight: bold;
+}
+
+nav .sections li {
+    padding-left: 15px;
+}
+
+nav .select {
+    display: none;
+}
+
+@media (max-width:1240px) {
+    nav .logo {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width:1203px) {
+    nav .sections li a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:998px) {
+    nav .links {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    nav .select {
+        display: block;
+        width: 120px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    nav .sections {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        width: 300px;
+        left: 75px;
+        top: calc(100% - 20px);
+        display: none;
+        padding-top: 30px;
+    }
+
+    nav .sections::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: white;
+        top: 15px;
+    }
+
+    nav .sections li {
+        margin: 10px 0;
+        padding: 10px;
+        transition: 0.3s;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    nav .sections li:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    nav .sections li a {
+        font-size: 15px;
+    }
+
+    nav .select:hover+.sections,
+    nav .sections:hover {
+        display: block;
+    }
+}
+
+@media (max-width:660px) {
+    nav .logo img {
+        width: 50px;
+    }
+
+    nav .logo {
+        width: 50px;
+    }
+
+    nav .select {
+        margin-left: 0;
+        font-size: 10px;
+        width: 65px;
+    }
+
+    nav .sections {
+        left: 0;
+    }
+}
+
+nav .links {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+nav .links i {
+    font-size: 18px;
+    z-index: 30;
+    position: relative;
+}
+
+nav .links li {
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav .sections img {
+    width: 50px;
+}
+
+nav .links img {
+    width: 40px;
+    border-radius: 4px;
+}
+
+nav .search {
+    transition: 0.3s;
+    display: flex;
+    /* border: 1px solid white;
+    padding: 10px; */
+}
+
+nav .search input {
+    transition: .3s;
+    margin-left: 15px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    display: none;
+}
+
+@keyframes leftmove {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 170px;
+    }
+}
+
+@media (max-width:660px) {
+    nav .search {
+        position: absolute !important;
+        z-index: 3;
+        right: 140px;
+    }
+
+    nav .search input {
+        background-color: black;
+    }
+}
+
+nav .links>li::after {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 20px;
+    background-color: transparent;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav .bell ul {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    right: -20px;
+    height: 400px;
+    overflow-y: scroll;
+    display: none;
+    margin-top: 20px;
+}
+
+@media (max-width:420px) {
+    nav .bell ul {
+        margin-top: 20px;
+        right: -60px;
+        width: 330px;
+    }
+}
+
+nav .bell ul li {
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+nav .bell ul li:hover {
+    background-color: black;
+}
+
+nav .bell ul a {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+}
+
+nav .bell ul li:hover>a {
+    color: white;
+}
+
+nav .bell:hover>ul {
+    display: flex;
+}
+
+
+nav .bell ul img {
+    width: 100px;
+    height: 60px;
+}
+
+nav .bell ul p {
+    width: 250px;
+    margin-left: 30px;
+}
+
+nav .accounts {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .accounts>i {
+    margin-left: 10px;
+}
+
+nav .accounts ul {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    right: -10px;
+    bottom: -327px;
+    display: none;
+}
+
+nav .accounts ul::before {
+    content: "";
+    position: absolute;
+    border: 10px solid;
+    border-bottom-color: white;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    right: 20px;
+    width: 0;
+    height: 0;
+    z-index: 10000;
+    top: -20px;
+}
+
+nav .accounts ul li {
+    background-color: black;
+    margin: 0px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav .accounts ul li i,
+nav .accounts ul li img {
+    margin-right: 20px;
+}
+
+nav .accounts ul li i {
+    padding-left: 10px;
+}
+
+nav .accounts ul li:nth-child(1) i {
+    width: 100%;
+    text-align: end;
+}
+
+nav .accounts ul li:nth-last-child(1) {
+    margin-top: 1px;
+    padding-bottom: 15px;
+}
+
+nav .accounts:hover>ul {
+    display: flex;
+    background-color: rgb(255 255 255 / 70%)
+}
+
+nav .accounts:hover>i {
+    transform: rotate(180deg);
+}
+
+nav .accounts ul li:hover p {
+    text-decoration: underline;
+}
+
+nav .accounts ul li p {
+    margin-block: 10px;
+}
+
+.landing {
+    background-image: url("../images/background-5.jpg");
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0 70%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.landing video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing .container {
+    position: relative;
+    color: white;
+    height: 100%;
+}
+
+.landing .container .text {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.landing .container .text img {
+    width: 400px;
+    transition: 0.3s;
+}
+
+.landing .container .text P {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 400px;
+    transition: 0.3s;
+}
+
+.landing .container .text .play {
+    background: white;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+.landing .container .text .info {
+    background: rgba(109, 109, 110, 0.7);
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: white;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.landing .container .text .play:hover {
+    background: #ccc
+}
+
+.landing .container .text .info:hover {
+    background: rgba(109, 109, 110, 0.5);
+}
+
+.landing .container .text .restart {
+    display: none;
+    transition: 0.3s;
+}
+
+.landing .container .text .active {
+    display: inline-block;
+    right: 0;
+    position: absolute;
+    background: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+@media (max-width:776px) {
+    .landing .container .text {
+        width: 90%;
+    }
+
+    .landing .container .text img {
+        width: 250px !important;
+    }
+
+    .landing .container .text P {
+        width: 300px !important;
+    }
+
+    .landing .container .text .play {
+        padding: 10px;
+    }
+
+    .landing .container .text .info {
+        padding: 10px;
+    }
+}
